@@ -15,7 +15,7 @@ int main(void)
 	string newName;
 	int newAge;
 	double newGpa;
-	cout << "Nhap ho ten hoc sinh moi: "; getline(cin, newName);
+	cout << endl <<  "Nhap ho ten hoc sinh moi: "; getline(cin, newName);
 	s0.setName(newName);
 	cout << "Ages: "; cin >> newAge;
 	s0.setAge(newAge);

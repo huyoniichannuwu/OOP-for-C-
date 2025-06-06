@@ -1,11 +1,12 @@
 #include "Student.h"
+int Student::numberofStudent = 0;  //bien tinh~
 
 Student::Student()			//default contruct
 {
 	name = "Huynh Gia Huy";
 	age = 18;
 	gpa = 3.2;
-	numberofStudent = 0;
+	numberofStudent++;
 }
 Student::Student(string n, int a, double g)		//parameterized contruct
 {
@@ -17,6 +18,7 @@ Student::Student(string n, int a, double g)		//parameterized contruct
 Student::~Student() 
 {
 	cout << "Destructor is called" << endl;
+	numberofStudent--;
 }
 string Student::getName()
 {
@@ -33,12 +35,15 @@ double Student::getGpa()
 }
 void Student::setName(string newName)
 {
-	name = newName;
+	if (newName.empty()) {
+		cout << "The string is empty" << endl;
+	}
+		this->name = newName;
 }
 void Student::setAge(int newAge)
 {
 	if (newAge > 0)
-		age = newAge;
+		this->age = newAge;
 	else
 	{
 		cout << "Invalid Age Data. Try again!" << endl;
@@ -48,7 +53,7 @@ void Student::setAge(int newAge)
 void Student::setGpa(double newGpa)
 {	
 	if (newGpa > 0 && newGpa <= 4.0)
-		gpa = newGpa;
+		this->gpa = newGpa;
 	else
 	{
 		cout << "Invalid GPA Data.Try again!"<<endl;
@@ -67,4 +72,3 @@ void Student::display()
 int Student::getnumberofStudent() {
 	return numberofStudent;
 }
-int Student::numberofStudent = 1;  //bien tinh~
