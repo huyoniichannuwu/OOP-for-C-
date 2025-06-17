@@ -1,0 +1,2 @@
+**Yêu cầu: Viết chương trình đọc các điểm có tọa độ (x,y) từ một file văn bản, với x, y là các số thực, và 
+in ra màn hình thứ tự các điểm đã được sắp xếp tăng dần theo khoảng cách đến gốc tọa độ (0,0).
